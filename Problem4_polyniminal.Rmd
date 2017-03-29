@@ -2,9 +2,13 @@
 title: "Problem4_Polynominal"
 author: "Akira MATSUI"
 date: "March 23, 2017"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
 ---
 
+# Introduction
 
 Define the polynomial function described below.
 
@@ -13,30 +17,15 @@ p(x) = a_0 + a_1 x +a_2x^2+ ... + a_nx^n = \sum^n_{i=0} a_i x^i
 \]
 
 
-Show out put when $x=1, 2,..., 10$ when $n=2$ 
+Show out put when $x=1, 2,..., 10$ when $n=2$
+
 
 In this exercise, all of coefficients is one, except for $a_0 = 11$ but you are supposed to write a general code. In other word, your function has to be used to any $n$ not only for $n=2$.
 
-
-# Sample Answer
-
-
-```{r}
-pol <- function(x,n){
-       s = 11
-       for (i in 1:n) {
-        s <- x**i + s
-       }
-       return(s)
-      }
-```
-To get an out put we want to see,
+# Question
+- write a code to caluculate polunominal
+- set $a_0 = 0$ and $a_i = 1, i \geq 1$
+- set $n=2$
+- At this time, you are supposed to write a code to caluculate $p(x) = 11 + x +x^2$.
 
 
-```{r}
-for (i in 0:10){
-     print(pol(i,2))
- }
-```
-
-Every number is prime number. Is this a coincidence?
